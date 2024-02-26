@@ -21,7 +21,7 @@ def get_all_products():
     
     for product in products:
         product_data = {
-            "id" : str(product["_id"]),
+            "_id" : str(product["_id"]),
             "name" : product["name"],
             "price" : product["price"],
             "img": product["img"]
@@ -61,6 +61,7 @@ def delete_product(product_id):
         return jsonify({"message": "Product deleted successfully", "deleted_product": deleted_product_data}), 200
     else:
         return jsonify({"error": "Product not found"}), 404
+        
 @app.route("/products/<string:prod_id>", methods=["PUT"])
 def update_product(prod_id):
     data = request.get_json()
