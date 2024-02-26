@@ -12,7 +12,7 @@ products=[
 
 @app.route("/")
 def hello_world():
-    return "<p>Hello, WorldS!</p>"
+    return "<p>Hello, World!</p>"
 
 @app.route("/products",methods=["GET"])
 def get_all_products():

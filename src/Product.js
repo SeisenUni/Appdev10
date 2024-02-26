@@ -1,6 +1,16 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-export default function Product(){
+// const Item = props =>
+// { 
+//     return (<div onClic k={e => props.callback(props.id)}>
+//         <img src={props.img} width={200} height={200} /><br/>
+//         id : {props.id}<br/>
+//         Name : {props.name}<br />
+//         Price : {props.price}<br/>    
+//     </div>);
+// }
+export default function Product()
+{
     const [product,setProduct]=useState([])
     useEffect(()=>{
         console.log("request to api")
