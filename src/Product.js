@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 export default function Product(){
     const [product,setProduct]=useState([])
@@ -7,7 +7,7 @@ export default function Product(){
         axios.get("http://127.0.0.1:5000/products")
         .then(response=>setProduct(response.data))
         .catch(error => {
-            console.error('Error fetching data:', error);
+            console.error('Error fetching datas:', error);
           })
     },[])
     const productList=product.map(p=><li key={p.id}>{p.id} 
